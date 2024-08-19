@@ -13,7 +13,6 @@
         
         <form action="{{route('aluno.store')}}" method="POST">
 
-            <x-alert></x-alert>
 
             @csrf()
 
@@ -32,8 +31,10 @@
 
           <button type="submit" class="btn-modal btn mt-4">Confirmar</button>
         </form>
+
       </div>
     </div>
   </div>
 </div>
 
+       

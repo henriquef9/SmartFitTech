@@ -61,7 +61,8 @@ class AlunoController extends Controller
         
         $this->service->new(CreateAlunoDTO::makeFromRequest($request));
 
-        return redirect()->route('aluno.index');
+        return redirect()->route('aluno.index')
+        ->with('message', 'Cadastrado com sucesso!');
     }
 
     public function edit(Request $request, String $id){
@@ -102,7 +103,8 @@ class AlunoController extends Controller
             back();
         }
 
-        return redirect()->route('aluno.index');
+        return redirect()->route('aluno.index')
+        ->with('message', 'Atualizado com sucesso!');
     }
 
     public function destroy(String $id){
@@ -117,7 +119,8 @@ class AlunoController extends Controller
 
         $this->service->delete($id);
 
-        return redirect()->route('aluno.index');
+        return redirect()->route('aluno.index')
+        ->with('message', 'Deletado com sucesso!');
     }
 
 }

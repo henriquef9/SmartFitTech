@@ -4,9 +4,11 @@
 
 @section('main')
 
+    <x-messages></x-messages>
 
     @include('aluno.create')
     
+
     <table class="w-100"> 
         <thead class="bg-color-primary text-white">
             <tr>
@@ -49,8 +51,15 @@
         <x-pagination :paginator="$alunos" :appends="$filters"></x-pagination>
     </div>
 
+    <x-alert></x-alert>
+
+
 
     @push('scripts')
         <script src="{{ asset('./js/app.js') }}"></script>
     @endpush
+
+
+
+    
  @endsection

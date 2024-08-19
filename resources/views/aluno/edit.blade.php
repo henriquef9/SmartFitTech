@@ -14,7 +14,6 @@
 
             <form action="{{route('aluno.update', $aluno->id)}}" method="POST">
                 
-              <x-alert></x-alert>
 
               @csrf()
               @method('PUT')
